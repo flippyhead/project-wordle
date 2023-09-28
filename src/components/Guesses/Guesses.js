@@ -1,10 +1,13 @@
 import React from "react";
 
-function Guesses({ guesses = [] }) {
+// create a new array with 5 empty strings
+
+
+function Guesses({guesses = []}) {
   console.log(guesses);
   return (
     <div className="guess-results">
-      {guesses.map(({ label, id }) => (
+      {guesses.map(({label, id}) => (
         <p key={id} className="guess">
           {label.split("").map((letter, index) => (
             <span key={`${id}-letter-${index}`} className="cell">
@@ -19,5 +22,7 @@ function Guesses({ guesses = [] }) {
     </div>
   );
 }
+
+// comment
 
 export default Guesses;
